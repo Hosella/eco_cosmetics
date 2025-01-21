@@ -1,0 +1,148 @@
+h5, h4, h3, h2, h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: 5%;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 5%;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 5%;
+}
+
+.header-content_nav-list-item {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 5%;
+}
+
+.header {
+  --columns: 2;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  padding: 0px 20px;
+}
+@media (min-width: 640px) {
+  .header {
+    --columns: 6;
+    column-gap: 30px;
+    padding: 0px 27px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    --columns: 12;
+    column-gap: 20px;
+    column-width: 80px;
+    padding: 0px auto;
+  }
+}
+.header-content {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 15px;
+}
+.header-content a {
+  display: flex;
+  align-items: center;
+}
+.header-content__img-icon {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 1024px) {
+  .header-content__img-icon {
+    display: none;
+  }
+}
+.header-content__img-icon-big {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header-content__img-icon-big {
+    display: block;
+    width: 270px;
+    height: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .header-content__burger-menu {
+    display: none;
+  }
+}
+.header-content__burger-menu-icon {
+  width: 20px;
+  height: 13px;
+}
+.header-content_nav {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header-content_nav {
+    display: block;
+  }
+}
+.header-content_nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.header-content_nav-list-item {
+  text-decoration: none;
+  color: #344F10;
+  line-height: 27px;
+}
+.header-content__shop-icon {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 1024px) {
+  .header-content__shop-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E4DFD3;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+}

@@ -9,24 +9,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/css/main.css">
 </head>
 <body>
   <header class="header">
     <div class="header-content">
       <div class="header-content__burger-menu">
-        <img src="image/icons/burger_menu.svg" alt="burger-menu">
+        <img src="image/icons/burger_menu.svg" class="header-content__burger-menu-icon" alt="burger-menu">
       </div>
   
-      <div class="header-content__icon">
+      <div class="header-content__img">
         <a href="#">
-          <img src="image/icons/logo.svg" class="header-content__icon-img" alt="logo">
+          <img src="image/icons/logo.svg" class="header-content__img-icon" alt="logo">
+          <img src="image/icons/logo_big.svg" class="header-content__img-icon-big" alt="logo">
         </a>
       </div>
+
+      <nav class="header-content_nav">
+        <ul class="header-content_nav-list">
+          <li> <a href="#" class="header-content_nav-list-item">Shop</a></li>
+          <li> <a href="#" class="header-content_nav-list-item">Contact</a></li>
+          <li> <a href="#" class="header-content_nav-list-item">About</a></li>
+        </ul>
+      </nav>
   
       <div class="header-content__shop">
         <a href="#">
-          <img src="image/icons/shop.svg" alt="shop-icon">
+          <img src="image/icons/shop.svg" class="header-content__shop-icon" alt="shop-icon">
         </a>
       </div>
     </div>
