@@ -2,6 +2,7 @@
 @import "_typography.scss";
 
 @import "blocks/header.scss";
+@import "blocks/hero.scss";
 
 * {
   margin: 0;
@@ -14,4 +15,10 @@ body {
   background-color: $page-color;
   color: $black;
   font-family: 'Poppins', sans-serif;
+  @extend %text;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

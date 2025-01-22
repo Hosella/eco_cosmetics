@@ -1,0 +1,56 @@
+.hero {
+  &__img {
+    width: 100%;
+    height: 267px;
+    object-fit: cover;
+  }
+  
+  &-content {
+    @include pageGrid;
+
+    &__text {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      &-title {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      &-caption {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__button {
+      grid-column: 1 / -1;
+      color: $white;
+      background-color: $black;
+      width: 100%;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      text-transform: uppercase;
+      --font-size: 16px;
+      letter-spacing: calc(var(--font-size) * 0.15);
+      font-weight: 600;
+    }
+
+    &__caption {
+      grid-column: 1 / -1;
+      padding-block: 100px;
+      
+      &-text {
+        color: $green;
+        text-transform: uppercase;
+        --font-size: 18px;
+        letter-spacing: calc(var(--font-size) * 0.05);
+        font-weight: 600;
+      }
+    }
+  }
+}
