@@ -9,6 +9,10 @@
     align-items: center;
     padding-block: 15px;
 
+    @include onDesktop {
+      padding-block: 23px;
+    }
+
     a {
       display: flex;
       align-items: center;
