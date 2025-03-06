@@ -1,0 +1,73 @@
+.caption {
+  padding-block: 100px;
+  padding-inline: 20px;
+
+  @include onTablet {
+    grid-column: 1 / -1;
+    padding-block: 130px;
+    display: flex;
+    justify-content: center;
+    padding-inline: 0px;
+  }
+
+  @include onDesktop {
+    padding: 0;
+    padding-block: 200px;
+    flex-direction: column;
+  }
+
+  &__rectangle {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $green;
+      opacity: 0.5;
+    }
+  }
+
+  &__texts {
+    @include onDesktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-text1 {
+      display: none;
+
+      @include onDesktop {
+        display: inline-block;
+        width: 380px;
+        line-height: 24px;
+      }
+    }
+
+    &-text2 {
+      color: $green;
+      text-transform: uppercase;
+      --font-size: 18px;
+      letter-spacing: calc(var(--font-size) * 0.05);
+      font-weight: 600;
+      
+      @include onTablet {
+        text-align: center;
+        width: 280px;
+      }
+
+      @include onDesktop {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.rectangle1 {
+  margin-bottom: 100px;
+}
+
+.rectangle2 {
+  margin-top: 100px;
+}
