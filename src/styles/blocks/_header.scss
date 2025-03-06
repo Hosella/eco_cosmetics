@@ -9,8 +9,12 @@
     align-items: center;
     padding-block: 15px;
 
-    @include onDesktop {
+    @include onTablet {
       padding-block: 23px;
+    }
+
+    @include onDesktop {
+      padding-block: 40px;
     }
 
     a {
