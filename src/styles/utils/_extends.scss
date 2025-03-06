@@ -7,31 +7,31 @@
 %h1 {
   font-size: 60px;
   line-height: 130%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 %h2 {
   font-size: 36px;
   line-height: 110%;
-  letter-spacing: 5%;
+  letter-spacing: calc(36px * 0.05);
 }
 
 %h3 {
   font-size: 36px;
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 %h4 {
   font-size: 24px;
   line-height: 150%;
-  letter-spacing: 5%;
+  letter-spacing: calc(24px * 0.05);
 }
 
 %h5 {
   font-size: 18px;
   line-height: 150%;
-  letter-spacing: 5%;
+  letter-spacing: calc(18px * 0.05);
 }
 
 %text {
@@ -39,7 +39,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 %text2 {
@@ -47,7 +47,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: calc(14px * 0.05);
 }
 
 %text3 {
@@ -55,7 +55,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: calc(18px * 0.05);
 }
 
 %small_text {
@@ -63,7 +63,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 %menu_text {
@@ -71,7 +71,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 %button {
@@ -79,7 +79,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 130%;
-  letter-spacing: 15%;
+  letter-spacing: calc(16px * 0.15);
 }
 
 %decorative_text {
@@ -87,5 +87,5 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }

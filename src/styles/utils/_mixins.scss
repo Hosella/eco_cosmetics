@@ -15,18 +15,15 @@
   display: grid;
   column-gap: 20px;
   grid-template-columns: repeat(var(--columns), 1fr);
-  padding: 0px 20px;
 
   @include onTablet {
     --columns: 6;
     column-gap: 30px;
-    padding: 0px 27px;
   }
 
   @include onDesktop {
     --columns: 12;
     column-gap: 20px;
     column-width: 80px;
-    padding: 0px auto;
   }
 }
