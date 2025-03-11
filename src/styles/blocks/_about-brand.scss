@@ -1,0 +1,130 @@
+.about-brand {
+  padding-bottom: 100px;
+
+  @include onTablet {
+    @include pageGrid;
+    padding-bottom: 130px;
+  }
+
+  @include onDesktop {
+    position: relative;
+    padding-bottom: 200px;
+  }
+
+  &__caption {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      width: 302px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg) translate(-100% , 0);
+      transform-origin: left top;
+    }
+
+    &-line {
+      width: 100px;
+      height: 1px;
+      background-color: $green;
+      opacity: 0.5;
+    }
+
+    &-text {
+      @extend %decorative_text;
+      color: $green;
+      opacity: 0.5;
+    }
+  }
+  
+  &__texts {
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 2 / 6;
+    }
+    
+    &-title {
+      color: $green;
+      text-transform: uppercase;
+    }
+    
+    &-text {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      @extend %small_text;
+
+      @include onTablet {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+      }
+
+      @include onDesktop {
+        padding-top: 40px;
+      }
+    }
+
+    &-textForPc {
+      display: none;
+
+      @include onDesktop {
+        display: inline-block;
+        padding-bottom: 40px;
+      }
+    }
+    
+    &-button {
+      color: $green;
+      @extend %decorative_text;
+      padding-bottom: 10px;
+      border-bottom: 1px $green solid;
+    }
+  }
+
+  &__picture {
+    grid-column: 4 / -1;
+
+    @include onDesktop {
+      grid-column: 7 / -1;
+      height: 529px;
+      display: flex;
+      gap: 20px;
+    }
+
+    &-img{
+      display: none;
+    
+      @include onTablet {
+        display: inline-block;
+        width: 100%;
+        height: 321px;
+        object-fit: cover;
+      }
+
+      @include onDesktop {
+        max-width: 380px;
+        height: 529px;
+      }
+    }
+
+    &-imgForPc {
+      display: none;
+  
+      @include onDesktop {
+        display: inline-block;
+        max-width: 180px;
+        height: 430px;
+        object-fit: cover;
+        align-self: flex-end;
+      }
+    }
+  }
+}
