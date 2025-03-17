@@ -58,7 +58,19 @@
       }
 
       @include onDesktop {
+        display: none;
+      }
+    }
+
+    &-text2-pc {
+      display: none;
+      
+      @include onDesktop {
+        display: inline-block;;
         text-align: left;
+        color: $green;
+        text-transform: uppercase;
+        width: 380px;
       }
     }
   }

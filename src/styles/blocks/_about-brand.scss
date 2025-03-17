@@ -53,6 +53,20 @@
     &-title {
       color: $green;
       text-transform: uppercase;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &-title-pc {
+      display: none;
+      
+      @include onDesktop {
+        display: inline-block;
+        color: $green;
+        text-transform: uppercase;
+      }
     }
     
     &-text {
