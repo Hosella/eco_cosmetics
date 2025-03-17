@@ -5,6 +5,7 @@
 @import "blocks/hero.scss";
 @import "blocks/caption";
 @import "blocks/about-brand.scss";
+@import "blocks/shop.scss";
 
 * {
   margin: 0;
@@ -39,5 +40,27 @@ a {
   @include onDesktop {
     padding: 50px;
     padding-block: 0;
+  }
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: $white;
+  background-color: $black;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  --font-size: 16px;
+  letter-spacing: calc(var(--font-size) * 0.15);
+  font-weight: 600;
+
+  @include onTablet {
+    width: 280px;
   }
 }

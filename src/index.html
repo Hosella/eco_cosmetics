@@ -46,7 +46,11 @@
   <main>
     <div class="container">
       <section class="hero">
-        <img src="image/hero_section_img.png" alt="Jars of cosmetic cream" class="hero__img">
+        <picture class="hero__picture">
+          <source srcset="image/for_pc/hero_section_img.png" media="(min-width: 1024px)">
+          <source srcset="image/for_tablets/hero_section_img.png" media="(min-width: 640px)">
+          <img src="image/for_mobile/hero_section_img.png" alt="Jars of cosmetic cream" class="hero__picture-img">
+        </picture>
   
         <div class="hero-content">
           <div class="hero-content__text">
@@ -54,8 +58,8 @@
             <p class="hero-content__text-caption">20% of sales at a wild bird shelter</p>
           </div>
   
-          <div class="hero-content__button">
-            <a href="#" class="hero-content__button-link">Shop</a>
+          <div class="hero-content__button button-wrap">
+            <a href="#" class="button">Shop</a>
           </div>
         </div>
       </section>
@@ -70,6 +74,7 @@
         
         <div style="width: 100%;">
           <h5 class="caption__texts-text2">if you choose the gifts of nature and care about it’s - scroll down</h5>
+          <h4 class="caption__texts-text2-pc">if you choose the gifts of nature and care about it’s - scroll down</h4>
           <div class="caption__rectangle rectangle2"></div>
         </div>
       </div>
@@ -84,6 +89,7 @@
 
         <div class="about-brand__texts">
           <h4 class="about-brand__texts-title">About our brand</h4>
+          <h2 class="about-brand__texts-title-pc">About our brand</h2>
           <p class="about-brand__texts-text">Our brand cosmetics are made from natural ingredients and we are promoting them to the masses. Shampoo, hair conditioner, soap - in recycled paper. Creams, oils, washing products in glass containers with recycled paper labels. No synthetics and microplastics in cosmetics. And the packaging from it can be returned for recycling or reused.</p>
           <p class="about-brand__texts-textForPc">We are all neighbors of one big House. And we must protect what we have. Destroying everything around for the sake of consumerism and imaginary convenience, we destroy what does not belong to us. Be aware of your choice!</p>
           <a href="#" class="about-brand__texts-button">LEARN MORE</a>
@@ -91,16 +97,61 @@
 
         <div class="about-brand__picture">
           <picture>
-            <source srcset="image/about_brand-pc.png" media="(min-width: 1024px)">
-            <img src="image/about_brand-tablet.png" alt="Candle" class="about-brand__picture-img">
+            <source srcset="image/for_pc/about_brand.png" media="(min-width: 1024px)">
+            <img src="image/for_tablets/about_brand.png" alt="Candle" class="about-brand__picture-img">
           </picture>
   
-          <img src="image/about_brand-pc-2.png" alt="Candle" class="about-brand__picture-imgForPc">
+          <img src="image/for_pc/about_brand-2.png" alt="Candle" class="about-brand__picture-imgForPc">
         </div>
 
       </section>
     </div>
-        <!-- shop -->
+
+    <div class="container">
+      <section class="shop">
+        <div class="shop__caption">
+          <div class="shop__caption-line"></div>
+          <span class="shop__caption-text">shop</span>
+        </div>
+
+        <h4 class="shop__title">shop</h4>
+        <h2 class="shop__title-pc">shop</h2>
+
+        <div class="shop__category">
+          <button class="shop__category-btn">face</button>
+          <button class="shop__category-btn">body</button>
+          <button class="shop__category-btn">hair</button>
+          <button class="shop__category-btn">candles</button>
+        </div>
+
+        <div class="shop__product">
+          <div class="shop__product-card card1">
+            <picture>
+              <source srcset="image/for_pc/hydrophilic_oil.png" media="(min-width: 1024px)">
+              <source srcset="image/for_tablets/hydrophilic_oil.png" media="(min-width: 640px)">
+              <img src="image/for_mobile/hydrophilic_oil.png" alt="Hydrophilic oil" class="shop__product-card-img">
+            </picture>
+  
+            <h5 class="shop__product-card-title">Hydrophilic oil</h5>
+            <span class="shop__product-card-price">160 UAH</span>
+          </div>
+  
+          <div class="shop__product-card card2">
+            <picture>
+              <source srcset="image/for_pc/ubtan.png" media="(min-width: 1024px)">
+              <img src="image/for_tablets/ubtan.png" alt="Ubtan" class="shop__product-card-img">
+            </picture>
+  
+            <h5 class="shop__product-card-title">Hydrophilic oil</h5>
+            <span class="shop__product-card-price">160 UAH</span>
+          </div>
+        </div>
+
+        <div class="shop__button button-wrap">
+          <a href="#" class="button">all products</a>
+        </div>
+      </section>
+    </div>
         <!-- about the creators -->
         <!-- Ayurvedic Tooth Powder -->
         <!-- contact us -->
