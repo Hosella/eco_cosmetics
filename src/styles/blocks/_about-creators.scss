@@ -1,0 +1,21 @@
+.about-creators {
+  padding-bottom: 100px;
+
+  &__title {
+    color: $green;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @extend %text2;
+    padding-bottom: 30px;
+  }
+
+  &__button {
+    padding-top: 25px;
+  }
+}

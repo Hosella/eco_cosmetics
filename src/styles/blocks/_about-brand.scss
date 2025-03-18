@@ -94,13 +94,6 @@
         padding-bottom: 40px;
       }
     }
-    
-    &-button {
-      color: $green;
-      @extend %decorative_text;
-      padding-bottom: 10px;
-      border-bottom: 1px $green solid;
-    }
   }
 
   &__picture {
