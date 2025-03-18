@@ -42,7 +42,7 @@ body {
   letter-spacing: 0px;
 }
 
-.about-creators__texts, .shop__category-btn {
+.about-creators__content__texts, .shop__category-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -801,19 +801,73 @@ body {
 .about-creators {
   padding-bottom: 100px;
 }
-.about-creators__title {
+@media (min-width: 640px) {
+  .about-creators {
+    --columns: 2;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+}
+@media (min-width: 640px) and (min-width: 640px) {
+  .about-creators {
+    --columns: 6;
+    column-gap: 30px;
+  }
+}
+@media (min-width: 640px) and (min-width: 1024px) {
+  .about-creators {
+    --columns: 12;
+    column-gap: 20px;
+    column-width: 80px;
+  }
+}
+.about-creators__content {
+  grid-column: 1/4;
+}
+.about-creators__content__title {
   color: #344F10;
   text-transform: uppercase;
   padding-bottom: 10px;
 }
-.about-creators__texts {
+.about-creators__content__texts {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-bottom: 30px;
 }
-.about-creators__button {
+@media (min-width: 640px) {
+  .about-creators__content__texts {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+}
+.about-creators__content__button {
   padding-top: 25px;
+}
+@media (min-width: 640px) {
+  .about-creators__content__button {
+    padding-top: 30px;
+    justify-content: left !important;
+  }
+}
+.about-creators__picture {
+  display: none;
+}
+@media (min-width: 640px) {
+  .about-creators__picture {
+    display: inline-block;
+    grid-column: 4/7;
+  }
+}
+.about-creators__picture-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
 }
 
 * {
