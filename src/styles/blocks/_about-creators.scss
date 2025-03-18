@@ -1,14 +1,14 @@
-.about-brand {
+.about-creators {
   padding-bottom: 100px;
 
   @include onTablet {
     @include pageGrid;
-    padding-bottom: 130px;
+    padding-bottom: 139px;
   }
 
   @include onDesktop {
-    position: relative;
     padding-bottom: 200px;
+    position: relative;
   }
 
   &__caption {
@@ -16,7 +16,7 @@
 
     @include onDesktop {
       display: flex;
-      width: 302px;
+      width: 229px;
       justify-content: center;
       align-items: center;
       gap: 10px;
@@ -25,6 +25,7 @@
       left: 0;
       transform: rotate(-90deg) translate(-100% , 0);
       transform-origin: left top;
+      text-wrap: nowrap;
     }
 
     &-line {
@@ -40,97 +41,97 @@
       opacity: 0.5;
     }
   }
-  
-  &__texts {
-    @include onTablet {
-      grid-column: 1 / 4;
-    }
+
+  &__content {
+    grid-column: 1 / 4;
 
     @include onDesktop {
       grid-column: 2 / 6;
     }
-    
-    &-title {
+
+    &__title {
       color: $green;
       text-transform: uppercase;
+      padding-bottom: 10px;
 
       @include onDesktop {
         display: none;
       }
     }
 
-    &-title-pc {
+    &__title-pc {
       display: none;
-      
+      color: $green;
+      text-transform: uppercase;
+      padding-bottom: 34px;
+
       @include onDesktop {
         display: inline-block;
-        color: $green;
-        text-transform: uppercase;
       }
     }
-    
-    &-text {
-      padding-top: 10px;
+  
+    &__texts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @extend %text2;
       padding-bottom: 30px;
-      @extend %small_text;
 
       @include onTablet {
         font-weight: inherit;
         font-size: inherit;
         line-height: inherit;
         letter-spacing: inherit;
+        gap: 15px;
+        padding-bottom: 20px;
+      }
+
+      @include onDesktop {
+        gap: 30px;
+      }
+
+      &-textForPc {
+        display: none;
+
+        @include onDesktop {
+          display: inline-block;
+        }
+      }
+    }
+
+    &__button {
+      padding-top: 25px;
+
+      @include onTablet {
+        padding-top: 30px;
+        justify-content: left !important;
       }
 
       @include onDesktop {
         padding-top: 40px;
       }
     }
-
-    &-textForPc {
-      display: none;
-
-      @include onDesktop {
-        display: inline-block;
-        padding-bottom: 40px;
-      }
-    }
   }
 
   &__picture {
-    grid-column: 4 / -1;
+    display: none;
+
+    @include onTablet {
+      display: inline-block;
+      grid-column: 4 / 7;
+    }
 
     @include onDesktop {
       grid-column: 7 / -1;
-      height: 529px;
-      display: flex;
-      gap: 20px;
     }
 
-    &-img{
-      display: none;
-    
-      @include onTablet {
-        display: inline-block;
-        width: 100%;
-        height: 321px;
-        object-fit: cover;
-      }
+    &-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
 
       @include onDesktop {
-        max-width: 380px;
-        height: 529px;
-      }
-    }
-
-    &-imgForPc {
-      display: none;
-  
-      @include onDesktop {
-        display: inline-block;
-        max-width: 180px;
-        height: 430px;
-        object-fit: cover;
-        align-self: flex-end;
+        height: 659px;
       }
     }
   }

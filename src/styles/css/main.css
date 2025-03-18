@@ -42,7 +42,7 @@ body {
   letter-spacing: 0px;
 }
 
-.shop__category-btn {
+.about-creators__content__texts, .shop__category-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -66,7 +66,7 @@ body {
   letter-spacing: 0px;
 }
 
-.shop__caption-text, .about-brand__texts-button, .about-brand__caption-text {
+.link-button, .about-creators__caption-text, .shop__caption-text, .about-brand__caption-text {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -530,11 +530,6 @@ body {
     padding-bottom: 40px;
   }
 }
-.about-brand__texts-button {
-  color: #344F10;
-  padding-bottom: 10px;
-  border-bottom: 1px #344F10 solid;
-}
 .about-brand__picture {
   grid-column: 4/-1;
 }
@@ -803,6 +798,162 @@ body {
   }
 }
 
+.about-creators {
+  padding-bottom: 100px;
+}
+@media (min-width: 640px) {
+  .about-creators {
+    --columns: 2;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    padding-bottom: 139px;
+  }
+}
+@media (min-width: 640px) and (min-width: 640px) {
+  .about-creators {
+    --columns: 6;
+    column-gap: 30px;
+  }
+}
+@media (min-width: 640px) and (min-width: 1024px) {
+  .about-creators {
+    --columns: 12;
+    column-gap: 20px;
+    column-width: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .about-creators {
+    padding-bottom: 200px;
+    position: relative;
+  }
+}
+.about-creators__caption {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .about-creators__caption {
+    display: flex;
+    width: 229px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: left top;
+    text-wrap: nowrap;
+  }
+}
+.about-creators__caption-line {
+  width: 100px;
+  height: 1px;
+  background-color: #344F10;
+  opacity: 0.5;
+}
+.about-creators__caption-text {
+  color: #344F10;
+  opacity: 0.5;
+}
+.about-creators__content {
+  grid-column: 1/4;
+}
+@media (min-width: 1024px) {
+  .about-creators__content {
+    grid-column: 2/6;
+  }
+}
+.about-creators__content__title {
+  color: #344F10;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+@media (min-width: 1024px) {
+  .about-creators__content__title {
+    display: none;
+  }
+}
+.about-creators__content__title-pc {
+  display: none;
+  color: #344F10;
+  text-transform: uppercase;
+  padding-bottom: 34px;
+}
+@media (min-width: 1024px) {
+  .about-creators__content__title-pc {
+    display: inline-block;
+  }
+}
+.about-creators__content__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .about-creators__content__texts {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .about-creators__content__texts {
+    gap: 30px;
+  }
+}
+.about-creators__content__texts-textForPc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .about-creators__content__texts-textForPc {
+    display: inline-block;
+  }
+}
+.about-creators__content__button {
+  padding-top: 25px;
+}
+@media (min-width: 640px) {
+  .about-creators__content__button {
+    padding-top: 30px;
+    justify-content: left !important;
+  }
+}
+@media (min-width: 1024px) {
+  .about-creators__content__button {
+    padding-top: 40px;
+  }
+}
+.about-creators__picture {
+  display: none;
+}
+@media (min-width: 640px) {
+  .about-creators__picture {
+    display: inline-block;
+    grid-column: 4/7;
+  }
+}
+@media (min-width: 1024px) {
+  .about-creators__picture {
+    grid-column: 7/-1;
+  }
+}
+.about-creators__picture-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .about-creators__picture-img {
+    height: 659px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -861,4 +1012,10 @@ a {
   .button {
     width: 280px;
   }
+}
+
+.link-button {
+  color: #344F10;
+  padding-bottom: 10px;
+  border-bottom: 1px #344F10 solid;
 }
