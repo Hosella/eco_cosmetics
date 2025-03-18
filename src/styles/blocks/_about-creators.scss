@@ -3,15 +3,71 @@
 
   @include onTablet {
     @include pageGrid;
+    padding-bottom: 139px;
+  }
+
+  @include onDesktop {
+    padding-bottom: 200px;
+    position: relative;
+  }
+
+  &__caption {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      width: 229px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg) translate(-100% , 0);
+      transform-origin: left top;
+      text-wrap: nowrap;
+    }
+
+    &-line {
+      width: 100px;
+      height: 1px;
+      background-color: $green;
+      opacity: 0.5;
+    }
+
+    &-text {
+      @extend %decorative_text;
+      color: $green;
+      opacity: 0.5;
+    }
   }
 
   &__content {
     grid-column: 1 / 4;
 
+    @include onDesktop {
+      grid-column: 2 / 6;
+    }
+
     &__title {
       color: $green;
       text-transform: uppercase;
       padding-bottom: 10px;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &__title-pc {
+      display: none;
+      color: $green;
+      text-transform: uppercase;
+      padding-bottom: 34px;
+
+      @include onDesktop {
+        display: inline-block;
+      }
     }
   
     &__texts {
@@ -29,6 +85,18 @@
         gap: 15px;
         padding-bottom: 20px;
       }
+
+      @include onDesktop {
+        gap: 30px;
+      }
+
+      &-textForPc {
+        display: none;
+
+        @include onDesktop {
+          display: inline-block;
+        }
+      }
     }
 
     &__button {
@@ -37,6 +105,10 @@
       @include onTablet {
         padding-top: 30px;
         justify-content: left !important;
+      }
+
+      @include onDesktop {
+        padding-top: 40px;
       }
     }
   }
@@ -49,10 +121,18 @@
       grid-column: 4 / 7;
     }
 
+    @include onDesktop {
+      grid-column: 7 / -1;
+    }
+
     &-img {
       width: 100%;
       height: 440px;
       object-fit: cover;
+
+      @include onDesktop {
+        height: 659px;
+      }
     }
   }
 }
