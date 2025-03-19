@@ -42,7 +42,7 @@ body {
   letter-spacing: 0px;
 }
 
-.about-creators__content__texts, .shop__category-btn {
+.tooth-powder__benefits-block__text, .about-creators__content__texts, .shop__category-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -325,7 +325,7 @@ body {
 }
 @media (min-width: 1024px) {
   .hero-content__button {
-    justify-content: start;
+    justify-content: start !important;
   }
 }
 
@@ -952,6 +952,63 @@ body {
   .about-creators__picture-img {
     height: 659px;
   }
+}
+
+.tooth-powder__title {
+  color: #344F10;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.tooth-powder__jar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+.tooth-powder__jar-ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 49px;
+  text-wrap: nowrap;
+}
+.tooth-powder__jar-ingredients span:nth-child(odd) {
+  padding-bottom: 3px;
+}
+.tooth-powder__jar-img {
+  height: 397px;
+  width: 202px;
+  margin-right: -20px;
+}
+.tooth-powder__benefits {
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.tooth-powder__benefits-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.tooth-powder__benefits-block__text {
+  text-transform: uppercase;
+  text-align: center;
+}
+.tooth-powder__benefits-block__img1 {
+  width: 62px;
+  height: 60px;
+}
+.tooth-powder__benefits-block__img2 {
+  width: 100px;
+  height: 84px;
+}
+.tooth-powder__benefits-block__img3 {
+  width: 79px;
+  height: 74px;
 }
 
 * {

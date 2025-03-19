@@ -1,0 +1,69 @@
+.tooth-powder {
+  &__title {
+    color: $green;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+
+  &__jar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+
+    &-ingredients {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 49px;
+      text-wrap: nowrap;
+
+      span:nth-child(odd) {
+        padding-bottom: 3px;
+      }
+    }
+
+    &-img {
+      height: 397px;
+      width: calc(182px + 20px);
+      margin-right: -20px;
+    }
+  }
+
+  &__benefits {
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      &__text {
+        @extend %text2;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      &__img1 {
+        width: 62px;
+        height: 60px;
+      }
+
+      &__img2 {
+        width: 100px;
+        height: 84px;
+      }
+
+      &__img3 {
+        width: 79px;
+        height: 74px;
+      }
+    }
+  }
+}
