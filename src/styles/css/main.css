@@ -349,23 +349,31 @@ body {
     flex-direction: column;
   }
 }
-.caption__rectangle {
-  display: none;
+@media (min-width: 1024px) {
+  .caption__texts-block1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    align-self: start;
+    padding-block: 100px;
+    border-top: 1px solid rgba(52, 79, 16, 0.5);
+  }
 }
 @media (min-width: 1024px) {
-  .caption__rectangle {
-    display: block;
-    height: 1px;
+  .caption__texts-block2 {
     width: 100%;
-    background-color: #344F10;
-    opacity: 0.5;
+    align-self: flex-end;
+    padding-block: 131px;
+    border-bottom: 1px solid rgba(52, 79, 16, 0.5);
   }
 }
 @media (min-width: 1024px) {
   .caption__texts {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    height: 346px;
+    gap: 120px;
   }
 }
 .caption__texts-text1 {
@@ -406,15 +414,8 @@ body {
     color: #344F10;
     text-transform: uppercase;
     width: 380px;
+    align-self: flex-end;
   }
-}
-
-.rectangle1 {
-  margin-bottom: 100px;
-}
-
-.rectangle2 {
-  margin-top: 100px;
 }
 
 .about-brand {
