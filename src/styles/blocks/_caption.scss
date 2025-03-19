@@ -16,23 +16,33 @@
     flex-direction: column;
   }
 
-  &__rectangle {
-    display: none;
-
-    @include onDesktop {
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: $green;
-      opacity: 0.5;
-    }
-  }
-
   &__texts {
+    &-block1 {
+      @include onDesktop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        align-self: start;
+        padding-block: 100px;
+        border-top: 1px solid rgba($green, 0.5);
+      }
+    }
+
+    &-block2 {
+      @include onDesktop {
+        width: 100%;
+        align-self: flex-end;
+        padding-block: 131px;
+        border-bottom: 1px solid rgba($green, 0.5);
+      }
+    }
+
     @include onDesktop {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      height: 346px;
+      gap: 120px;
     }
 
     &-text1 {
@@ -71,15 +81,8 @@
         color: $green;
         text-transform: uppercase;
         width: 380px;
+        align-self: flex-end;
       }
     }
   }
-}
-
-.rectangle1 {
-  margin-bottom: 100px;
-}
-
-.rectangle2 {
-  margin-top: 100px;
 }
