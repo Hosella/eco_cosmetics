@@ -42,7 +42,7 @@ body {
   letter-spacing: 0px;
 }
 
-.about-creators__content__texts, .shop__category-btn {
+.tooth-powder__benefits-block__text, .about-creators__content__texts, .shop__category-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -325,7 +325,7 @@ body {
 }
 @media (min-width: 1024px) {
   .hero-content__button {
-    justify-content: start;
+    justify-content: start !important;
   }
 }
 
@@ -951,6 +951,139 @@ body {
 @media (min-width: 1024px) {
   .about-creators__picture-img {
     height: 659px;
+  }
+}
+
+@media (min-width: 640px) {
+  .tooth-powder {
+    position: relative;
+  }
+}
+.tooth-powder__title {
+  color: #344F10;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__title {
+    padding: 0;
+  }
+}
+.tooth-powder__jar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__jar {
+    margin-top: -58px;
+    padding: 0;
+  }
+}
+.tooth-powder__jar-ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 49px;
+  text-wrap: nowrap;
+}
+.tooth-powder__jar-ingredients span:nth-child(odd) {
+  padding-bottom: 3px;
+}
+.tooth-powder__jar-img {
+  height: 397px;
+  width: 202px;
+  margin-right: -20px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__jar-img {
+    height: 397px;
+    width: 418px;
+    margin-right: -20px;
+  }
+}
+@media (min-width: 640px) {
+  .tooth-powder__button {
+    position: absolute;
+    top: 382px;
+  }
+}
+.tooth-powder__benefits {
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits {
+    padding-top: 121px;
+    padding-bottom: 130px;
+    --columns: 2;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    align-items: baseline;
+  }
+}
+@media (min-width: 640px) and (min-width: 640px) {
+  .tooth-powder__benefits {
+    --columns: 6;
+    column-gap: 30px;
+  }
+}
+@media (min-width: 640px) and (min-width: 1024px) {
+  .tooth-powder__benefits {
+    --columns: 12;
+    column-gap: 20px;
+    column-width: 80px;
+  }
+}
+.tooth-powder__benefits-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block {
+    grid-column: span 2;
+  }
+}
+.tooth-powder__benefits-block__text {
+  text-transform: uppercase;
+  text-align: center;
+}
+.tooth-powder__benefits-block__img1 {
+  width: 62px;
+  height: 60px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block__img1 {
+    width: 80px;
+    height: 60px;
+  }
+}
+.tooth-powder__benefits-block__img2 {
+  width: 100px;
+  height: 84px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block__img2 {
+    width: 80px;
+    height: 68px;
+  }
+}
+.tooth-powder__benefits-block__img3 {
+  width: 79px;
+  height: 74px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block__img3 {
+    width: 80px;
+    height: 75px;
   }
 }
 
