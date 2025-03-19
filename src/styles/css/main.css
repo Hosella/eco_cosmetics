@@ -954,10 +954,20 @@ body {
   }
 }
 
+@media (min-width: 640px) {
+  .tooth-powder {
+    position: relative;
+  }
+}
 .tooth-powder__title {
   color: #344F10;
   text-transform: uppercase;
   padding-bottom: 20px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__title {
+    padding: 0;
+  }
 }
 .tooth-powder__jar {
   display: flex;
@@ -965,6 +975,12 @@ body {
   align-items: center;
   gap: 20px;
   padding-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__jar {
+    margin-top: -58px;
+    padding: 0;
+  }
 }
 .tooth-powder__jar-ingredients {
   display: flex;
@@ -981,11 +997,48 @@ body {
   width: 202px;
   margin-right: -20px;
 }
+@media (min-width: 640px) {
+  .tooth-powder__jar-img {
+    height: 397px;
+    width: 418px;
+    margin-right: -20px;
+  }
+}
+@media (min-width: 640px) {
+  .tooth-powder__button {
+    position: absolute;
+    top: 382px;
+  }
+}
 .tooth-powder__benefits {
   padding-block: 100px;
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits {
+    padding-top: 121px;
+    padding-bottom: 130px;
+    --columns: 2;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    align-items: baseline;
+  }
+}
+@media (min-width: 640px) and (min-width: 640px) {
+  .tooth-powder__benefits {
+    --columns: 6;
+    column-gap: 30px;
+  }
+}
+@media (min-width: 640px) and (min-width: 1024px) {
+  .tooth-powder__benefits {
+    --columns: 12;
+    column-gap: 20px;
+    column-width: 80px;
+  }
 }
 .tooth-powder__benefits-block {
   display: flex;
@@ -993,6 +1046,11 @@ body {
   gap: 20px;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block {
+    grid-column: span 2;
+  }
 }
 .tooth-powder__benefits-block__text {
   text-transform: uppercase;
@@ -1002,13 +1060,31 @@ body {
   width: 62px;
   height: 60px;
 }
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block__img1 {
+    width: 80px;
+    height: 60px;
+  }
+}
 .tooth-powder__benefits-block__img2 {
   width: 100px;
   height: 84px;
 }
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block__img2 {
+    width: 80px;
+    height: 68px;
+  }
+}
 .tooth-powder__benefits-block__img3 {
   width: 79px;
   height: 74px;
+}
+@media (min-width: 640px) {
+  .tooth-powder__benefits-block__img3 {
+    width: 80px;
+    height: 75px;
+  }
 }
 
 * {
