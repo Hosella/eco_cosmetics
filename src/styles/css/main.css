@@ -66,7 +66,7 @@ body {
   letter-spacing: 0px;
 }
 
-.link-button, .about-creators__caption-text, .shop__caption-text, .about-brand__caption-text {
+.link-button, .tooth-powder__caption-text, .about-creators__caption-text, .shop__caption-text, .about-brand__caption-text {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -960,6 +960,55 @@ body {
     position: relative;
   }
 }
+@media (min-width: 1024px) {
+  .tooth-powder {
+    --columns: 2;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+}
+@media (min-width: 1024px) and (min-width: 640px) {
+  .tooth-powder {
+    --columns: 6;
+    column-gap: 30px;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .tooth-powder {
+    --columns: 12;
+    column-gap: 20px;
+    column-width: 80px;
+  }
+}
+.tooth-powder__caption {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .tooth-powder__caption {
+    display: flex;
+    width: 179px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: left top;
+    text-wrap: nowrap;
+  }
+}
+.tooth-powder__caption-line {
+  width: 100px;
+  height: 1px;
+  background-color: #344F10;
+  opacity: 0.5;
+}
+.tooth-powder__caption-text {
+  color: #344F10;
+  opacity: 0.5;
+}
 .tooth-powder__title {
   color: #344F10;
   text-transform: uppercase;
@@ -968,6 +1017,22 @@ body {
 @media (min-width: 640px) {
   .tooth-powder__title {
     padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .tooth-powder__title {
+    display: none;
+  }
+}
+.tooth-powder__title-pc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .tooth-powder__title-pc {
+    display: inline-block;
+    color: #344F10;
+    text-transform: uppercase;
+    grid-column: 2/6;
   }
 }
 .tooth-powder__jar {
@@ -981,6 +1046,12 @@ body {
   .tooth-powder__jar {
     margin-top: -58px;
     padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .tooth-powder__jar {
+    margin: 0;
+    grid-column: 6/-1;
   }
 }
 .tooth-powder__jar-ingredients {
@@ -1005,10 +1076,23 @@ body {
     margin-right: -20px;
   }
 }
+@media (min-width: 1024px) {
+  .tooth-powder__jar-img {
+    height: 397px;
+    width: 480px;
+    margin: 0;
+  }
+}
 @media (min-width: 640px) {
   .tooth-powder__button {
     position: absolute;
     top: 382px;
+  }
+}
+@media (min-width: 1024px) {
+  .tooth-powder__button {
+    display: inline-block;
+    grid-column: 2/4;
   }
 }
 .tooth-powder__benefits {
@@ -1041,6 +1125,12 @@ body {
     column-width: 80px;
   }
 }
+@media (min-width: 1024px) {
+  .tooth-powder__benefits {
+    padding-block: 200px;
+    grid-column: 1/-1;
+  }
+}
 .tooth-powder__benefits-block {
   display: flex;
   flex-direction: column;
@@ -1051,6 +1141,11 @@ body {
 @media (min-width: 640px) {
   .tooth-powder__benefits-block {
     grid-column: span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .tooth-powder__benefits-block {
+    grid-column: span 4;
   }
 }
 .tooth-powder__benefits-block__text {
@@ -1077,6 +1172,12 @@ body {
     height: 68px;
   }
 }
+@media (min-width: 1024px) {
+  .tooth-powder__benefits-block__img2 {
+    width: 99px;
+    height: 84px;
+  }
+}
 .tooth-powder__benefits-block__img3 {
   width: 79px;
   height: 74px;
@@ -1085,6 +1186,12 @@ body {
   .tooth-powder__benefits-block__img3 {
     width: 80px;
     height: 75px;
+  }
+}
+@media (min-width: 1024px) {
+  .tooth-powder__benefits-block__img3 {
+    width: 79px;
+    height: 74px;
   }
 }
 
