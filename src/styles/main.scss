@@ -8,6 +8,7 @@
 @import "blocks/shop.scss";
 @import "blocks/about-creators.scss";
 @import "blocks/tooth-powder.scss";
+@import "blocks/contact-us";
 
 * {
   margin: 0;
@@ -26,6 +27,44 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+input, textarea {
+  @extend %small_text;
+  color: $green;
+  box-sizing: border-box;
+  height: 38px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid $gray;
+
+  @include onTablet {
+    font-weight: 500;
+  }
+
+  @include onDesktop {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  &::placeholder {
+    color: #828282;
+    padding-bottom: 10px;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $black;
+  }
+
+  &:not(:placeholder-shown):not(:focus) {
+    border-color: $green;
+  }
+
+  &:invalid {
+    color: #EB5757;
+    border-color: #EB5757;
+  }
 }
 
 .container {

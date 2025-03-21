@@ -42,7 +42,7 @@ body {
   letter-spacing: 0px;
 }
 
-.tooth-powder__benefits-block__text, .about-creators__content__texts, .shop__category-btn {
+.contact-us__text, .tooth-powder__benefits-block__text, .about-creators__content__texts, .shop__category-btn {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -58,7 +58,7 @@ body {
   letter-spacing: 0.9px;
 }
 
-.about-brand__texts-text {
+input, textarea, .about-brand__texts-text {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -1195,6 +1195,36 @@ body {
   }
 }
 
+.contact-us {
+  padding-bottom: 100px;
+}
+.contact-us__title {
+  color: #344F10;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.contact-us__text {
+  padding-bottom: 30px;
+}
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-us__form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact-us__form-inputs-textarea {
+  height: 47px;
+  position: relative;
+}
+.contact-us__form-inputs-textarea::placeholder {
+  position: absolute;
+  bottom: 3px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1211,6 +1241,41 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+input, textarea {
+  color: #344F10;
+  box-sizing: border-box;
+  height: 38px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid #BDBDBD;
+}
+@media (min-width: 640px) {
+  input, textarea {
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  input, textarea {
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+input::placeholder, textarea::placeholder {
+  color: #828282;
+  padding-bottom: 10px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #333333;
+}
+input:not(:placeholder-shown):not(:focus), textarea:not(:placeholder-shown):not(:focus) {
+  border-color: #344F10;
+}
+input:invalid, textarea:invalid {
+  color: #EB5757;
+  border-color: #EB5757;
 }
 
 .container {
