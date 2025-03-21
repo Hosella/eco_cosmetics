@@ -61,7 +61,7 @@ input, textarea {
     border-color: $green;
   }
 
-  &:invalid {
+  &:invalid, &:invalid:not(:focus) {
     color: #EB5757;
     border-color: #EB5757;
   }
