@@ -254,24 +254,37 @@
     
     <div class="container">
       <section class="contact-us">
-        <h4 class="contact-us__title">contact us</h4>
+        <div class="contact-us__caption">
+          <div class="contact-us__caption-line"></div>
+          <span class="contact-us__caption-text">help</span>
+        </div>
 
-        <p class="contact-us__text">
-          We will help you choose a product that suits you and answer your other questions
-        </p>
+        <div class="contact-us__content">
+          <h4 class="contact-us__content__title">contact us</h4>
+          <h2 class="contact-us__content__title-pc">contact us</h2>
+  
+          <p class="contact-us__content__text">
+            We will help you choose a product that suits you and answer your other questions
+          </p>
+  
+          <form action="" class="contact-us__content__form">
+            <div class="contact-us__content__form-inputs">
+              <input type="text" name="Name" placeholder="Your Name">
+              <input type="email" name="E-Mail" placeholder="E-Mail">
+              <input type="tel" name="Phone Number" placeholder="Phone Number">
+              <textarea name="Message" class="contact-us__content__form-inputs-textarea" cols="30" rows="3" placeholder="Your Message"></textarea>
+            </div>
+  
+            <div class="contact-us__content__form-button button-wrap">
+              <a href="#" class="button">send a message</a>
+            </div>
+          </form>
+        </div>
 
-        <form action="" class="contact-us__form">
-          <div class="contact-us__form-inputs">
-            <input type="text" name="Name" placeholder="Your Name">
-            <input type="text" name="E-Mail" placeholder="E-Mail">
-            <input type="number" name="Phone Number" placeholder="Phone Number">
-            <textarea name="Message" class="contact-us__form-inputs-textarea" cols="30" rows="3" placeholder="Your Message"></textarea>
-          </div>
-
-          <div class="button-wrap">
-            <a href="#" class="button">send a message</a>
-          </div>
-        </form>
+        <picture class="contact-us__picture">
+          <source srcset="image/for_pc/contact_us.png" media="(min-width: 1024px)">
+          <img src="image/for_tablets/contact_us.png" alt="Bird" class="contact-us__picture-img">
+        </picture>
       </section>
     </div>
   </main>
