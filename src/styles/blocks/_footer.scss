@@ -9,6 +9,11 @@
     padding-bottom: 30px;
   }
 
+  @include onDesktop {
+    gpadding-top: 60px;
+    padding-bottom: 62px;
+  }
+
   &-container {
     @include onTablet {
       @include pageGrid;
@@ -30,6 +35,15 @@
       letter-spacing: 0px;
     }
   
+    @include onDesktop {
+      grid-column: 1 / 8;
+      flex-direction: row;
+      gap: 40px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0px;
+    }
   }
 
   &__icons {
@@ -41,6 +55,17 @@
     @include onTablet {
       grid-column: 1 / 4;
       padding-bottom: 50px;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / -1;
+      padding: 0;
+      padding-top: 30px;
+    }
+
+    &-img {
+      height: 20px;
+      width: 20px;
     }
   }
 
@@ -56,6 +81,15 @@
       grid-row: 1 / span 2;
       padding: 0;
     }
+
+    @include onDesktop {
+      grid-column: 8 / -1;
+      gap: 20px;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+    }
   }
 
   &__text-mobile {
@@ -68,12 +102,30 @@
     }
   }
 
-  &__text {
+  &__text-tablet {
     display: none;
+    @extend %small_text;
 
     @include onTablet {
       display: inline-block;
       grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__text-desktop {
+    display: none;
+    @extend %decorative_text;
+
+    @include onDesktop {
+      display: inline-block;
+      grid-column: 1 / 8;
+      grid-row: 3;
+      align-self: flex-end;
+      font-size: 18px;
     }
   }
 }

@@ -58,7 +58,7 @@ body {
   letter-spacing: 0.9px;
 }
 
-input, textarea, .footer__info, .about-brand__texts-text {
+input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -74,7 +74,7 @@ input, textarea, .footer__info, .about-brand__texts-text {
   letter-spacing: 0px;
 }
 
-.link-button, .footer__text-mobile, .contact-us__caption-text, .tooth-powder__caption-text, .about-creators__caption-text, .shop__caption-text, .about-brand__caption-text {
+.link-button, .footer__text-desktop, .footer__text-mobile, .contact-us__caption-text, .tooth-powder__caption-text, .about-creators__caption-text, .shop__caption-text, .about-brand__caption-text {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -1385,6 +1385,12 @@ input, textarea, .footer__info, .about-brand__texts-text {
     padding-bottom: 30px;
   }
 }
+@media (min-width: 1024px) {
+  .footer {
+    gpadding-top: 60px;
+    padding-bottom: 62px;
+  }
+}
 @media (min-width: 640px) {
   .footer-container {
     --columns: 2;
@@ -1421,6 +1427,17 @@ input, textarea, .footer__info, .about-brand__texts-text {
     letter-spacing: 0px;
   }
 }
+@media (min-width: 1024px) {
+  .footer__links {
+    grid-column: 1/8;
+    flex-direction: row;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0px;
+  }
+}
 .footer__icons {
   display: flex;
   gap: 20px;
@@ -1432,6 +1449,17 @@ input, textarea, .footer__info, .about-brand__texts-text {
     grid-column: 1/4;
     padding-bottom: 50px;
   }
+}
+@media (min-width: 1024px) {
+  .footer__icons {
+    grid-column: 8/-1;
+    padding: 0;
+    padding-top: 30px;
+  }
+}
+.footer__icons-img {
+  height: 20px;
+  width: 20px;
 }
 .footer__info {
   display: flex;
@@ -1446,6 +1474,16 @@ input, textarea, .footer__info, .about-brand__texts-text {
     padding: 0;
   }
 }
+@media (min-width: 1024px) {
+  .footer__info {
+    grid-column: 8/-1;
+    gap: 20px;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+}
 .footer__text-mobile {
   font-weight: 600;
   text-align: center;
@@ -1455,13 +1493,30 @@ input, textarea, .footer__info, .about-brand__texts-text {
     display: none;
   }
 }
-.footer__text {
+.footer__text-tablet {
   display: none;
 }
 @media (min-width: 640px) {
-  .footer__text {
+  .footer__text-tablet {
     display: inline-block;
     grid-column: 1/4;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__text-tablet {
+    display: none;
+  }
+}
+.footer__text-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .footer__text-desktop {
+    display: inline-block;
+    grid-column: 1/8;
+    grid-row: 3;
+    align-self: flex-end;
+    font-size: 18px;
   }
 }
 
