@@ -145,7 +145,6 @@
 
 .menu-open {
   display: block;
-  height: 100svh;
 
   @include onDesktop {
     display: none;
@@ -154,5 +153,4 @@
 
 .menu-close {
   display: none;
-  height: 1px;
 }

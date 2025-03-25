@@ -238,7 +238,6 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 
 .menu-open {
   display: block;
-  height: 100svh;
 }
 @media (min-width: 1024px) {
   .menu-open {
@@ -248,7 +247,6 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 
 .menu-close {
   display: none;
-  height: 1px;
 }
 
 @media (min-width: 640px) {
