@@ -10,13 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/css/main.css">
+  <script src="script/index.js" defer></script>
 </head>
 <body>
   <div class="container">
     <header class="header">
       <div class="header-content">
         <div class="header-content__burger-menu">
-          <img src="image/icons/burger_menu.svg" class="header-content__burger-menu-icon" alt="burger-menu">
+          <img src="image/icons/burger_menu.svg" class="header-content__burger-menu-icon" alt="burger-menu" id="open-icon">
         </div>
     
         <div class="header-content__img">
@@ -40,9 +41,23 @@
           </a>
         </div>
       </div>
+
+      <div class="header__menu" id="menu">
+        <div class="container">
+          <img src="image/icons/close.svg" class="header__menu-icon" alt="close icon" id="close-icon">
+
+          <nav class="header__menu-nav">
+            <ul class="header__menu-nav__list">
+              <li class="header__menu-nav__list-item"> <a href="#shop">Shop</a></li>
+              <li class="header__menu-nav__list-item"> <a href="#contact-us">Contact</a></li>
+              <li class="header__menu-nav__list-item"> <a href="#about-brand" >About</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
   </div>
-
+  
   <main>
     <div class="container">
       <section class="hero">
