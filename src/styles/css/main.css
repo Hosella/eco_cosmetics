@@ -1588,6 +1588,31 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
   }
 }
 
+.upButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333333;
+  opacity: 0.3;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  transition: opacity 0.3s;
+}
+@media (min-width: 640px) {
+  .upButton {
+    display: block;
+  }
+}
+.upButton:hover {
+  opacity: 0.6;
+}
+.upButton__img {
+  height: 25px;
+  width: 25px;
+}
+
 * {
   margin: 0;
   padding: 0;
