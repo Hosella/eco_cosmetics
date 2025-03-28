@@ -75,32 +75,40 @@
     display: flex;
     justify-content: center;
     gap: 34px;
-    padding-bottom: 27px;
+    padding-bottom: 15px;
 
     @include onTablet {
       grid-column: 1 / -1;
       justify-content: left;
-      padding-bottom: 37px;
+      padding-bottom: 25px;
     }
 
     @include onDesktop {
       grid-column: 2 / -1;
       gap: 51px;
-      padding-bottom: 62px;
+      padding-bottom: 50px;
     }
 
     &-btn {
-      border: none;
-      background-color: inherit;
       @extend %text2;
       text-transform: uppercase;
       color: #828282;
+      padding-bottom: 10px;
 
       @include onDesktop {
         font-weight: 600;
         font-size: 18px;
         line-height: 150%;
         letter-spacing: calc(18px * 0.05);
+      }
+
+      &:has(input[type="radio"]:checked) {
+        color: $black;
+        border-bottom: 2px solid $black;
+      }
+
+      & > input[type="radio"] {
+        appearance: none;
       }
     }
   }
@@ -119,6 +127,7 @@
 
     &-card {
       padding-bottom: 30px;
+      width: 100%;
   
       @include onTablet {
         padding-bottom: 50px;
