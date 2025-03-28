@@ -131,13 +131,13 @@
         <h2 class="shop__title-pc">shop</h2>
 
         <div class="shop__category">
-          <button class="shop__category-btn">face</button>
-          <button class="shop__category-btn">body</button>
-          <button class="shop__category-btn">hair</button>
-          <button class="shop__category-btn">candles</button>
+          <label class="shop__category-btn"><input type="radio" name="category" value="face" checked>face</label>
+          <label class="shop__category-btn"><input type="radio" name="category" value="body">body</label>
+          <label class="shop__category-btn"><input type="radio" name="category" value="hair">hair</label>
+          <label class="shop__category-btn"><input type="radio" name="category" value="candles">candles</label>
         </div>
 
-        <div class="shop__product">
+        <div class="shop__product" id="shop-product">
           <div class="shop__product-card card1">
             <picture>
               <source srcset="image/for_pc/hydrophilic_oil.png" media="(min-width: 1024px)">
@@ -155,7 +155,7 @@
               <img src="image/for_tablets/ubtan.png" alt="Ubtan" class="shop__product-card-img">
             </picture>
   
-            <h5 class="shop__product-card-title">Hydrophilic oil</h5>
+            <h5 class="shop__product-card-title">Ubtan</h5>
             <span class="shop__product-card-price">160 UAH</span>
           </div>
         </div>
