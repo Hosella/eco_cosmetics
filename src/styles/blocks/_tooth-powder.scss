@@ -113,7 +113,7 @@
 
   &__button {
     @include onTablet {
-      position: absolute;
+      position: absolute !important;
       top: 382px;
     }
 

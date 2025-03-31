@@ -127,11 +127,15 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .header-content__img-icon {
   width: 24px;
   height: 24px;
+  transition: transform 0.3s;
 }
 @media (min-width: 1024px) {
   .header-content__img-icon {
     display: none;
   }
+}
+.header-content__img-icon:hover {
+  transform: scale(1.05);
 }
 .header-content__img-icon-big {
   display: none;
@@ -141,6 +145,10 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
     display: block;
     width: 270px;
     height: 50px;
+    transition: transform 0.3s;
+  }
+  .header-content__img-icon-big:hover {
+    transform: scale(1.05);
   }
 }
 @media (min-width: 1024px) {
@@ -151,6 +159,10 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .header-content__burger-menu-icon {
   width: 20px;
   height: 13px;
+  transition: transform 0.3s;
+}
+.header-content__burger-menu-icon:hover {
+  transform: scale(1.05);
 }
 .header-content__nav {
   display: none;
@@ -170,16 +182,26 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
   text-decoration: none;
   color: #344F10;
   line-height: 27px;
+  padding-bottom: 10px;
+  position: relative;
+  transition: transform 0.3s;
+}
+.header-content__nav-list-item:hover {
+  transform: scale(1.05);
 }
 .header-content__shop-icon {
   width: 24px;
   height: 24px;
+  transition: transform 0.3s;
 }
 @media (min-width: 1024px) {
   .header-content__shop-icon {
     width: 32px;
     height: 32px;
   }
+}
+.header-content__shop-icon:hover {
+  transform: scale(1.05);
 }
 .header__menu {
   background-color: #333333;
@@ -208,6 +230,10 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .header__menu-icon {
   width: 15px;
   height: 15px;
+  transition: transform 0.3s;
+}
+.header__menu-icon:hover {
+  transform: scale(1.05);
 }
 .header__menu-nav {
   padding-top: 45px;
@@ -232,6 +258,10 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .header__menu-nav__list-item {
   width: 100%;
   font-weight: 600;
+  transition: transform 0.3s;
+}
+.header__menu-nav__list-item:hover {
+  transform: scale(1.05);
 }
 .header__menu-nav__list-item > a {
   display: inline-block;
@@ -766,6 +796,20 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
   text-transform: uppercase;
   color: #828282;
   padding-bottom: 10px;
+  position: relative;
+}
+.shop__category-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #828282;
+  transition: width 0.3s;
+}
+.shop__category-btn:hover::after {
+  width: 100%;
 }
 @media (min-width: 1024px) {
   .shop__category-btn {
@@ -778,6 +822,9 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .shop__category-btn:has(input[type=radio]:checked) {
   color: #333333;
   border-bottom: 2px solid #333333;
+}
+.shop__category-btn:has(input[type=radio]:checked)::after {
+  display: none;
 }
 .shop__category-btn > input[type=radio] {
   appearance: none;
@@ -1173,7 +1220,7 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 }
 @media (min-width: 640px) {
   .tooth-powder__button {
-    position: absolute;
+    position: absolute !important;
     top: 382px;
   }
 }
@@ -1712,6 +1759,7 @@ input:invalid, input:invalid:not(:focus), textarea:invalid, textarea:invalid:not
 }
 
 .button {
+  box-sizing: border-box;
   color: #F2F2F2;
   background-color: #333333;
   width: 100%;
@@ -1722,15 +1770,40 @@ input:invalid, input:invalid:not(:focus), textarea:invalid, textarea:invalid:not
   --font-size: 16px;
   letter-spacing: calc(var(--font-size) * 0.15);
   font-weight: 600;
+  border: 1px solid #333333;
+  transition: all 0.3s;
 }
 @media (min-width: 640px) {
   .button {
     width: 280px;
   }
 }
+.button:hover {
+  border: 1px solid #333333;
+  background-color: inherit;
+  color: #333333;
+}
+.button:active {
+  transition: all 0s;
+  border-color: #8E8D8C;
+  color: #8E8D8C;
+}
 
 .link-button {
   color: #344F10;
   padding-bottom: 10px;
-  border-bottom: 1px #344F10 solid;
+  position: relative;
+}
+.link-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #344F10;
+  transition: width 0.3s;
+}
+.link-button:hover::after {
+  width: 100%;
 }

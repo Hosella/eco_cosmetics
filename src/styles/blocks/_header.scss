@@ -26,9 +26,14 @@
     &__img-icon {
       width: 24px;
       height: 24px;
-      
+      transition: transform 0.3s;
+
       @include onDesktop {
         display: none;
+      }
+
+      &:hover {
+        transform: scale(1.05);
       }
 
       &-big {
@@ -38,6 +43,11 @@
           display: block;
           width: 270px;
           height: 50px;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }
@@ -50,6 +60,11 @@
       &-icon {
         width: 20px;
         height: 13px;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
 
@@ -70,7 +85,14 @@
           text-decoration: none;
           color: $green;
           line-height: 27px;
-          @extend %text3
+          @extend %text3;
+          padding-bottom: 10px;
+          position: relative;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }
@@ -78,10 +100,15 @@
     &__shop-icon {
       width: 24px;
       height: 24px;
+      transition: transform 0.3s;
 
       @include onDesktop {
         width: 32px;
         height: 32px;
+      }
+
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }
@@ -111,6 +138,11 @@
     &-icon {
       width: 15px;
       height: 15px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     &-nav {
@@ -135,6 +167,11 @@
           width: 100%;
           @extend %menu_text;
           font-weight: 600;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
           
           & > a {
             display: inline-block;
