@@ -61,11 +61,17 @@
   <main>
     <div class="container">
       <section class="hero">
-        <picture class="hero__picture">
-          <source srcset="image/for_pc/hero_section_img.png" media="(min-width: 1024px)">
-          <source srcset="image/for_tablets/hero_section_img.png" media="(min-width: 640px)">
-          <img src="image/for_mobile/hero_section_img.png" alt="Jars of cosmetic cream" class="hero__picture-img">
-        </picture>
+        <div class="hero__media">
+          <picture class="hero__media-picture">
+            <source srcset="image/for_pc/hero_section_img.png" media="(min-width: 1024px)">
+            <source srcset="image/for_tablets/hero_section_img.png" media="(min-width: 640px)">
+            <img src="image/for_mobile/hero_section_img.png" alt="Jars of cosmetic cream" class="hero__media-picture-img">
+          </picture>
+
+          <video class="hero__media-video" autoplay muted loop>
+            <source src="video/eco_cosmetic_video.mp4" type="video/mp4">
+          </video>
+        </div>
   
         <div class="hero-content">
           <div class="hero-content__text">
