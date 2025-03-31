@@ -9,38 +9,43 @@
     "- text text text text text img img img img img img";
   }
 
-  &__picture {
+  &__media {
+    width: calc(100% + 2 * 20px);
+    height: 267px;
+    margin-inline: -20px;
+
     @include onTablet {
+      width: 100%;
       grid-column: 1 / -1 ;
+      height: 500px;
+      margin: 0;
     }
 
     @include onDesktop {
+      width: 100%;
+      height: 451px;
       grid-area: img;
+      margin: 0;
+    }
+    
+    &-picture {
+      width: 100%;
+      height: 100%;
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
-    &-img {
-      width: calc(100% + 2 * 20px);
-      height: 267px;
-      margin-inline: -20px;
+    &-video {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-  
-      @include onTablet {
-        width: 100%;
-        grid-column: 1 / -1 ;
-        height: 500px;
-        margin: 0;
-      }
-  
-      @include onDesktop {
-        width: 100%;
-        height: 451px;
-        grid-area: img;
-        margin: 0;
-      }
+      display: none;
     }
   }
 
-  
   &-content {
     @include pageGrid;
     grid-column: 1 / -1;

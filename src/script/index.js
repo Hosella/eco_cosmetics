@@ -107,3 +107,19 @@ radiosCategory.forEach((radio) => {
       </div>`;
   });
 });
+
+//video
+const mediaContainer = document.querySelector(".hero__media");
+const mediaPhoto = mediaContainer.querySelector(".hero__media-picture");
+const mediaVideo = mediaContainer.querySelector(".hero__media-video");
+
+mediaContainer.addEventListener("mouseenter", () => {
+  mediaPhoto.style.display = "none";
+  mediaVideo.style.display = "block";
+});
+
+mediaContainer.addEventListener("mouseleave", () => {
+  mediaPhoto.style.display = "block";
+  mediaVideo.style.display = "none";
+  mediaVideo.currentTime = 0;
+});
