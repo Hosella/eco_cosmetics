@@ -56,7 +56,6 @@
     }
 
     @include onDesktop {
-      // grid-column: 2 / 6 ;
       grid-area: text;
       display: flex;
       flex-direction: column;
