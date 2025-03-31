@@ -3,22 +3,35 @@ const closeIcon = document.querySelector("#close-icon");
 const openIcon = document.querySelector("#open-icon");
 const buttonUp = document.querySelector("#upButton")
 const header = document.querySelector("#header");
+const body = document.querySelector("#body");
+const menuItems = document.querySelectorAll(".header__menu-nav__list-item");
 
+//menu for tablets and mobiles
 closeIcon.addEventListener("click", () =>{
   menu.classList.add("menu-close");
-  menu.classList.remove("menu-open")
+  menu.classList.remove("menu-open");
+  body.classList.remove("body-hidden");
 })
 
 openIcon.addEventListener("click", () =>{
   menu.classList.add("menu-open");
   menu.classList.remove("menu-close");
+  body.classList.add("body-hidden");
 })
 
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    menu.classList.add("menu-close");
+    menu.classList.remove("menu-open");
+    body.classList.remove("body-hidden");
+  })
+})
+
+//btn to scroll up
 buttonUp.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 })
 
-//btn to scroll up
 const observerOptions = {
   root: null,
   rootMargin: "0px",

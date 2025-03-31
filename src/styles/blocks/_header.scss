@@ -133,10 +133,16 @@
 
         &-item {
           width: 100%;
-          padding-bottom: 10px;
-          border-bottom: 1px solid #828282;
           @extend %menu_text;
           font-weight: 600;
+          
+          & > a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #828282;
+          }
         }
       }
     }

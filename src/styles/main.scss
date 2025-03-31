@@ -26,6 +26,14 @@ body {
   @extend %text;
 }
 
+.body-hidden {
+  overflow: hidden;
+
+  @include onDesktop {
+    overflow: auto;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
