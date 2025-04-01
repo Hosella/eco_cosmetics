@@ -865,6 +865,7 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .shop__product-card {
   padding-bottom: 30px;
   width: 100%;
+  transition: transform 0.3s;
 }
 @media (min-width: 640px) {
   .shop__product-card {
@@ -875,6 +876,9 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
   .shop__product-card {
     padding-bottom: 40px;
   }
+}
+.shop__product-card:hover {
+  transform: scale(1.05);
 }
 .shop__product-card-img {
   width: calc(100% + 40px);
