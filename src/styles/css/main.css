@@ -1573,6 +1573,12 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
     letter-spacing: 0px;
   }
 }
+.footer__links > a {
+  transition: transform 0.3s;
+}
+.footer__links > a:hover {
+  transform: scale(1.05);
+}
 .footer__icons {
   display: flex;
   gap: 20px;
@@ -1595,6 +1601,10 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
 .footer__icons-img {
   height: 20px;
   width: 20px;
+  transition: filter 0.3s;
+}
+.footer__icons-img:hover {
+  filter: invert(1);
 }
 .footer__info {
   display: flex;
@@ -1618,6 +1628,12 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
     line-height: inherit;
     letter-spacing: inherit;
   }
+}
+.footer__info > a {
+  transition: filter 0.3s;
+}
+.footer__info > a:hover {
+  filter: invert(1);
 }
 .footer__text-mobile {
   font-weight: 600;
