@@ -122,17 +122,22 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 0;
+    top: -110svh;
     margin-inline: -20px;
     padding-top: 20px;
+    transition: top 0.5s;
 
     @include onTablet {
       margin-inline: -27px;
       padding-top: 28px;
     }
-
+    
     @include onDesktop {
       display: none;
+    }
+
+    &.active {
+      top: 0;
     }
 
     &-icon {
@@ -184,16 +189,4 @@
       }
     }
   }
-}
-
-.menu-open {
-  display: block;
-
-  @include onDesktop {
-    display: none;
-  }
-}
-
-.menu-close {
-  display: none;
 }

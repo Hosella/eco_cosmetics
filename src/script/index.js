@@ -7,24 +7,17 @@ const body = document.querySelector("#body");
 const menuItems = document.querySelectorAll(".header__menu-nav__list-item");
 
 //menu for tablets and mobiles
-closeIcon.addEventListener("click", () =>{
-  menu.classList.add("menu-close");
-  menu.classList.remove("menu-open");
-  body.classList.remove("body-hidden");
-})
+const menuActions = () => {
+  body.classList.toggle("body-hidden");
+  menu.classList.toggle("active");
+}
 
-openIcon.addEventListener("click", () =>{
-  menu.classList.add("menu-open");
-  menu.classList.remove("menu-close");
-  body.classList.add("body-hidden");
-})
+closeIcon.addEventListener("click", () => menuActions())
+
+openIcon.addEventListener("click", () => menuActions())
 
 menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    menu.classList.add("menu-close");
-    menu.classList.remove("menu-open");
-    body.classList.remove("body-hidden");
-  })
+  item.addEventListener("click", () => menuActions())
 })
 
 //btn to scroll up
