@@ -61,45 +61,64 @@ observerForBtn.observe(header)
 
 //category
 const radiosCategory = document.querySelectorAll('input[name="category"]');
+const shopButton = document.getElementById("shop-button");
+const shopProducts = document.querySelector(".shop__products");
 
 const categoryContent = [
   {imgUrl: "hydrophilic_oil.png", title: "Hydrophilic oil", price: 160, category: "face"},
   {imgUrl: "ubtan.png", title: "Ubtan", price: 160, category: "face"},
+  {imgUrl: "ubtan.png", title: "Face mask", price: 60, category: "face"},
+  {imgUrl: "ubtan.png", title: "Cream", price: 110, category: "face"},
   {imgUrl: "body_oil.jpg", title: "Body oil", price: 180, category: "body"},
   {imgUrl: "body_butter.jpg", title: "Body butter", price: 160, category: "body"},
+  {imgUrl: "body_butter.jpg", title: "Body cream", price: 160, category: "body"},
   {imgUrl: "almond_shampoo.png", title: "Almond shampoo", price: 210, category: "hair"},
   {imgUrl: "hair_spray.jpg", title: "Hair spray", price: 170, category: "hair"},
   {imgUrl: "vanilla_candle.jpg", title: "Vanilla candle", price: 180, category: "candles"},
   {imgUrl: "forest_candle.jpg", title: "Forest candle", price: 120, category: "candles"},
 ];
 
+const handleAddCards = (product) => {
+  shopProducts.insertAdjacentHTML('beforeend', `
+    <div class="shop__products-card">
+      <picture>
+        <source srcset="image/for_pc/${product.imgUrl}" media="(min-width: 1024px)">
+        <source srcset="image/for_tablets/${product.imgUrl}" media="(min-width: 640px)">
+        <img src="image/for_mobile/${product.imgUrl}" alt="${product.title}" class="shop__products-card-img">
+      </picture>
+
+      <div class="shop__products-card-texts">
+      <h5>${product.title}</h5>
+      <span>${product.price} UAH</span>
+      </div>
+    </div>
+  `);
+}
+
+categoryContent.filter(contentItem => contentItem.category === "face").map(item => handleAddCards(item))
+
 radiosCategory.forEach((radio) => {
   radio.addEventListener("change",function () {
-    const filteredContent = categoryContent.filter((contentItem) => contentItem.category === radio.value);
+    const filteredContent = categoryContent.filter(contentItem => contentItem.category === radio.value);
 
-    document.getElementById("shop-product").innerHTML = ` 
-      <div class="shop__product-card card1">
-        <picture>
-          <source srcset="image/for_pc/${filteredContent[0].imgUrl}" media="(min-width: 1024px)">
-          <source srcset="image/for_tablets/${filteredContent[0].imgUrl}" media="(min-width: 640px)">
-          <img src="image/for_mobile/${filteredContent[0].imgUrl}" alt="${filteredContent[0].title}" class="shop__product-card-img">
-        </picture>
-  
-        <h5 class="shop__product-card-title">${filteredContent[0].title}</h5>
-        <span class="shop__product-card-price">${filteredContent[0].price} UAH</span>
-      </div>
-  
-      <div class="shop__product-card card2">
-        <picture>
-          <source srcset="image/for_pc/${filteredContent[1].imgUrl}" media="(min-width: 1024px)">
-          <img src="image/for_tablets/${filteredContent[1].imgUrl}" alt="${filteredContent[1].title}" class="shop__product-card-img">
-        </picture>
+    shopButton.innerHTML = "all products";
+    shopProducts.classList.remove("show-all")
+    document.getElementById("shop-products").innerHTML = "";
 
-        <h5 class="shop__product-card-title">${filteredContent[1].title}</h5>
-        <span class="shop__product-card-price">${filteredContent[1].price} UAH</span>
-      </div>`;
+    filteredContent.forEach(product => handleAddCards(product));
   });
 });
+
+shopButton.addEventListener("click", (e) => {
+  if (e.target.innerHTML === "all products") {
+    e.target.innerHTML = "show less"
+  } else {
+    e.target.innerHTML = "all products"
+    document.querySelector(".shop").scrollIntoView({ behavior: 'smooth' });
+  }
+
+  shopProducts.classList.toggle("show-all");
+})
 
 //video
 const mediaContainer = document.querySelector(".hero__media");
