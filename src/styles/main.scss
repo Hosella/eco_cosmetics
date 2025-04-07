@@ -112,7 +112,7 @@ input, textarea {
   letter-spacing: calc(var(--font-size) * 0.15);
   font-weight: 600;
   border: 1px solid $black;
-  transition: all 0.3s;
+  transition: color, background-color 0.3s;
   
   @include onTablet {
     width: 280px;

@@ -64,6 +64,17 @@ const radiosCategory = document.querySelectorAll('input[name="category"]');
 const shopButton = document.getElementById("shop-button");
 const shopProducts = document.querySelector(".shop__products");
 
+function updateVisibility() {
+  const isMobile = window.innerWidth < 640;
+  const visibleCount = isMobile ? 1 : 2;
+
+  if (shopProducts.childElementCount <= visibleCount) {
+    shopButton.style.visibility = "hidden";
+  } else {
+    shopButton.style.visibility = "visible";
+  }
+}
+
 const categoryContent = [
   {imgUrl: "hydrophilic_oil.png", title: "Hydrophilic oil", price: 160, category: "face"},
   {imgUrl: "ubtan.png", title: "Ubtan", price: 160, category: "face"},
@@ -106,8 +117,13 @@ radiosCategory.forEach((radio) => {
     document.getElementById("shop-products").innerHTML = "";
 
     filteredContent.forEach(product => handleAddCards(product));
+
+    updateVisibility();
   });
 });
+
+window.addEventListener('load', updateVisibility);
+window.addEventListener('resize', updateVisibility);
 
 shopButton.addEventListener("click", (e) => {
   if (e.target.innerHTML === "all products") {
