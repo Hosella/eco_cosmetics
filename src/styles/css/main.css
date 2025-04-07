@@ -306,6 +306,7 @@ input, textarea, .footer__text-tablet, .footer__info, .about-brand__texts-text {
   width: calc(100% + 40px);
   height: 267px;
   margin-inline: -20px;
+  cursor: url("/src/image/cursor/eye_cursor.ico") 4 4, auto;
 }
 @media (min-width: 640px) {
   .hero__media {

@@ -13,6 +13,7 @@
     width: calc(100% + 2 * 20px);
     height: 267px;
     margin-inline: -20px;
+    cursor: url('/src/image/cursor/eye_cursor.ico') 4 4, auto;
 
     @include onTablet {
       width: 100%;
